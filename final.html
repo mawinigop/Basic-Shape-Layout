@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .nav {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav a {
+            text-decoration: none;
+        }
+
+        .Home {
+            background-color: white;
+            color: black;
+            padding: 5px;
+        }
+
+        .About {
+            background-color: white;
+            color: black;
+            padding: 5px;
+        }
+
+        .Projects {
+            background-color: white;
+            color: black;
+          
+            padding: 5px;
+        }
+
+        .Contact {
+            background-color: white;
+            color: black;
+            padding: 5px;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #999;
+            height: 200px;
+            margin: 10px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            padding: 10px;
+            margin: 10;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ccc;
+            height: 100px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .sidebar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ccc;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .dot {
+            height: 125px;
+            width: 125px;
+            background-color: #bbb;
+            border-radius: 50%; 
+            display: inline-block;
+        }
+
+        .cta {
+            background: #666;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        @media (min-width: 701px)  {
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                width: 25%;
+                place-self: center;
+            }
+        }
+
+        @media (min-width: 841px) {
+            .features {
+                grid-template-columns: 2fr 1fr;
+            } 
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Header</h1>
+        <nav class="nav">
+            <a class="Home" href="#">Home</a>
+            <a class="About" href="#">About</a>
+            <a class="Projects" href="#">Projects</a>
+            <a class="Contact" href="#">Contact</a>
+        </nav>
+    </header>
+    <main class="layout">
+        <section class="hero">Hero</section>
+        <section class="features">
+            <div class="content">Main Content</div>
+            <div class="sidebar">Sidebar</div>
+        </section>
+    </main>
+    <section class="gallery">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </section>
+    <aside class="cta">Call to action</aside>
+    <footer>Footer</footer>
+</body>
+</html>
